@@ -1,0 +1,32 @@
+**************** C++ *************************
+
+#include <bits/stdc++.h>
+
+using namespace std;
+
+void freqOfArray(int size,int arr[]){
+    unordered_map<int,int>mpp;
+    
+    for(int i=0;i<size;i++){
+        mpp[arr[i]]++;
+    }
+    
+    for(auto it:mpp){
+        cout<< "The count of "<<it.first<< "= "<<it.second<<endl;
+    }
+}
+
+int main()
+{
+    int n;
+    cin>>n;
+    int arr[n];
+    for(int i=0;i<n;i++){
+        cin>>arr[i];
+    }
+    
+     freqOfArray(n,arr);
+    
+
+    return 0;
+}
