@@ -1,0 +1,34 @@
+*********************** C++*************************
+
+
+
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int findMinElement(int arr[],int size) {
+    int mini=arr[0];
+    
+    for(int i=1;i<size;i++){
+        if(mini > arr[i]){
+            mini=arr[i];
+        }
+    }
+    return mini;
+}
+
+int main()
+{
+    int n; //declared the variable to store the size of array
+    cin>>n;
+    int arr[n];//declared the array
+    for(int i=0;i<n;i++){
+        cin>>arr[i];//get the element of the array
+    }
+    
+    int ans =findMinElement(arr,n);//To store the funtion value we use ans variable && call the function
+    cout<<ans;//Printing the answer
+    
+
+    return 0;
+}
