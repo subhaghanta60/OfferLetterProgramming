@@ -1,0 +1,32 @@
+
+**********************C++*********************
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int findMaxElement(int arr[],int size) {
+    int maxi=arr[0];
+    
+    for(int i=1;i<size;i++){
+        if(maxi < arr[i]){
+            maxi=arr[i];
+        }
+    }
+    return maxi;
+}
+
+int main()
+{
+    int n; //declared the variable to store the size of array
+    cin>>n;
+    int arr[n];//declared the array
+    for(int i=0;i<n;i++){
+        cin>>arr[i];//get the element of the array
+    }
+    
+    int ans =findMaxElement(arr,n);//To store the funtion value we use ans variable && call the function
+    cout<<ans;//Printing the answer
+    
+
+    return 0;
+}
